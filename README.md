@@ -262,7 +262,7 @@ int main() {
     Kinematics arm;
     // Define joint configuration in radians
     std::vector<double> joint_angles = {0.0, 0.523, -0.785, 0.0, 1.047, 0.0};
-    
+
     Eigen::Matrix4d end_effector_pose = arm.forwardKinematics(joint_angles);
     std::cout << "End-Effector Homogeneous Transform:\n" << end_effector_pose << std::endl;
     return 0;
@@ -315,8 +315,8 @@ Distributed under the **MIT License**. See `LICENSE` for details.
 
 ## 👤 Author & Contact
 
-**Ardavan Ghal-Eh**  
-*Department of Mechanical Engineering, Sharif University of Technology*  
+**Ardavan Ghal-Eh**
+*Department of Mechanical Engineering, Sharif University of Technology*
 - **GitHub:** [@ArdavanGhal-Eh](https://github.com/ArdavanGhal-Eh)
 - **Profile:** [github.com/ArdavanGhal-Eh](https://github.com/ArdavanGhal-Eh)
 
@@ -459,7 +459,7 @@ $$\mathbf{v}_e = \mathbf{J}(\mathbf{q}) \dot{\mathbf{q}}$$
 
 برای جلوگیری از بی‌نهایت شدن سرعت‌ها در نزدیکی نقاط تکین ($\det(\mathbf{J}) pprox 0$):
 
-$$\mathbf{J}^{\dagger}_{	ext{DLS}} = \mathbf{J}^T \left( \mathbf{J} \mathbf{J}^T + \lambda^2 \mathbf{I}_{6 	imes 6} 
+$$\mathbf{J}^{\dagger}_{	ext{DLS}} = \mathbf{J}^T \left( \mathbf{J} \mathbf{J}^T + \lambda^2 \mathbf{I}_{6 	imes 6}
 ight)^{-1}$$
 
 $$\Delta \mathbf{q} = \mathbf{J}^{\dagger}_{	ext{DLS}} \, \mathbf{e}_{x}$$
@@ -467,7 +467,7 @@ $$\Delta \mathbf{q} = \mathbf{J}^{\dagger}_{	ext{DLS}} \, \mathbf{e}_{x}$$
 ### ۳. شاخص مانورپذیری یوشیکاوا
 معیار فاصله از پیکربندی تکین:
 
-$$w(\mathbf{q}) = \sqrt{\det\left( \mathbf{J}(\mathbf{q}) \mathbf{J}(\mathbf{q})^T 
+$$w(\mathbf{q}) = \sqrt{\det\left( \mathbf{J}(\mathbf{q}) \mathbf{J}(\mathbf{q})^T
 ight)} = \prod_{i=1}^6 \sigma_i$$
 
 ### ۴. رابطه تحلیلی چندجمله‌ای درجه ۵ مسیر
@@ -478,12 +478,16 @@ $$q(t) = a_0 + a_1 t + a_2 t^2 + a_3 t^3 + a_4 t^4 + a_5 t^5$$
 ضرایب تحلیلی:
 $$
 egin{aligned}
-a_0 &= q_0, \quad a_1 = v_0, \quad a_2 = rac{1}{2} a_0 \
-a_3 &= rac{1}{2 t_f^3} \left[ 20(q_f - q_0) - (8 v_f + 12 v_0) t_f - (3 a_0 - a_f) t_f^2 
+a_0 &= q_0, \quad a_1 = v_0, \quad a_2 =
+rac{1}{2} a_0 \
+a_3 &=
+rac{1}{2 t_f^3} \left[ 20(q_f - q_0) - (8 v_f + 12 v_0) t_f - (3 a_0 - a_f) t_f^2
 ight] \
-a_4 &= rac{1}{2 t_f^4} \left[ 30(q_0 - q_f) + (14 v_f + 16 v_0) t_f + (3 a_0 - 2 a_f) t_f^2 
+a_4 &=
+rac{1}{2 t_f^4} \left[ 30(q_0 - q_f) + (14 v_f + 16 v_0) t_f + (3 a_0 - 2 a_f) t_f^2
 ight] \
-a_5 &= rac{1}{2 t_f^5} \left[ 12(q_f - q_0) - 6(v_f + v_0) t_f - (a_f - a_0) t_f^2 
+a_5 &=
+rac{1}{2 t_f^5} \left[ 12(q_f - q_0) - 6(v_f + v_0) t_f - (a_f - a_0) t_f^2
 ight]
 \end{aligned}
 $$
@@ -542,8 +546,8 @@ obotics_engine.exe
 
 ## 👤 پدیدآورنده
 
-**اردوان قلعه**  
-*دانشکده مهندسی مکانیک، دانشگاه صنعتی شریف*  
+**اردوان قلعه**
+*دانشکده مهندسی مکانیک، دانشگاه صنعتی شریف*
 - **گیت‌هاب:** [@ArdavanGhal-Eh](https://github.com/ArdavanGhal-Eh)
 
 <p align="right">(<a href="#readme-top">بازگشت به بالا ↑</a>)</p>
