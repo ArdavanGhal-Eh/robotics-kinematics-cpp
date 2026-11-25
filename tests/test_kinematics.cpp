@@ -9,14 +9,14 @@ void test_forward_kinematics() {
     std::vector<double> joints = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
     Eigen::Matrix4d pose = Kinematics::forwardKinematics(joints);
     Eigen::Vector3d pos = pose.block<3,1>(0,3);
-    
+
     // Homogeneous transform bottom row must be [0, 0, 0, 1]
     assert(std::abs(pose(3,0)) < 1e-6);
     assert(std::abs(pose(3,1)) < 1e-6);
     assert(std::abs(pose(3,2)) < 1e-6);
     assert(std::abs(pose(3,3) - 1.0) < 1e-6);
 
-    std::cout << "✅ [PASS] test_forward_kinematics | End-effector pos: (" 
+    std::cout << "✅ [PASS] test_forward_kinematics | End-effector pos: ("
               << pos.x() << ", " << pos.y() << ", " << pos.z() << ")\n";
 }
 
